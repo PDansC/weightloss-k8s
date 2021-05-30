@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weightloss-deployment
+  labels:
+    app: weightloss-deployment
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: weightloss-deployment
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: weightloss-deployment
+    spec:
+      containers:
+        - image: danspun/weightlossapp
+          name: weightloss-deployment

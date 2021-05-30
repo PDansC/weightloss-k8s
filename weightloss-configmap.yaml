@@ -1,0 +1,19 @@
+
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: weightloss-configmap
+data:
+  PORT: "8080"
+  HOST: "0.0.0.0"
+  NODE_ENV: "development"
+  HOST_URL: "http://20.67.3.238"
+  COOKIE_ENCRYPT_PWD: "superAwesomePasswordStringThatIsAtLeast32CharactersLong!"
+  OKTA_ORG_URL: "https://dev-28201396.okta.com"
+  OKTA_CLIENT_ID: "0oac108h2qXApWCEv5d6"
+  OKTA_CLIENT_SECRET: "8_bO_lFFqN-B3h4PV9XUs_dnHWAVyeC2VDaMSeMn"
+  PGHOST: "weightloss-postgresql"
+  PGDATABASE: "postgres"
+  PGPORT: "5432"
+  PGUSERNAME: "postgres"
+  PGPASSWORD: "secretpassword"

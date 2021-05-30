@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: weightloss-service
+spec:
+  type: LoadBalancer
+  ports:
+  - name: "weightloss-service"
+    port: 80
+    targetPort: 8080
+  selector:
+    app: weightloss-deployment
